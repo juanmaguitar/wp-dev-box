@@ -1,0 +1,17 @@
+{
+	"name": "wp-dev-box",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"env:start": "wp-env start",
+		"env:stop": "wp-env stop"
+	},
+	"devDependencies": {
+		"@wordpress/env": "^10.2.0",
+		"@wordpress/scripts": "^27.9.0"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": ""
+}
