@@ -10,10 +10,10 @@
  *
  * @return void
  */
-function fsd_property_post_type() {
+function wpdevbox_property_post_type() {
 	$labels = array(
-		'name'                  => _x( 'Properties', 'Post type general name', 'fsd' ),
-		'singular_name'         => _x( 'Property', 'Post type singular name', 'fsd' ),
+		'name'                  => _x( 'Properties', 'Post type general name', 'wpdevbox' ),
+		'singular_name'         => _x( 'Property', 'Post type singular name', 'wpdevbox' ),
 		'menu_name'             => _x( 'Properties', 'Admin Menu text', 'fsd' ),
 		'name_admin_bar'        => _x( 'Property', 'Add New on Toolbar', 'fsd' ),
 		'add_new'               => __( 'Add New', 'fsd' ),
@@ -56,10 +56,20 @@ function fsd_property_post_type() {
 		'menu_position'      => 20,
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields' ), // IMPORTANT - custom fields is required.
 		'description'        => __( 'A custom property post type', 'fsd' ),
+		'template'           => array(
+			array(
+				'wpdevbox/property-meta-details',
+				array(
+					'lock' => array(
+						'remove' => true,
+					),
+				),
+			),
+		),
 
 	);
 
 	register_post_type( 'property', $args );
 }
 
-add_action( 'init', 'fsd_property_post_type' );
+add_action( 'init', 'wpdevbox_property_post_type' );

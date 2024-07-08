@@ -10,7 +10,7 @@
  *
  * @return void
  */
-function fsd_property_post_meta() {
+function wpdevbox_property_post_meta() {
 
 	register_post_meta(
 		'property',
@@ -53,4 +53,4 @@ function fsd_property_post_meta() {
 	);
 }
 
-add_action( 'init', 'fsd_property_post_meta' );
+add_action( 'init', 'wpdevbox_property_post_meta' );

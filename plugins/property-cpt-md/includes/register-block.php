@@ -11,7 +11,7 @@
  * @return void
  */
 function properties_cpt_md_block_init() {
-	register_block_type( PLUGIN_DIR . '/build' );
+	register_block_type( PLUGIN_DIR . '/build/blocks/property-cpt-md-details' );
 }
 
 add_action( 'init', 'properties_cpt_md_block_init' );

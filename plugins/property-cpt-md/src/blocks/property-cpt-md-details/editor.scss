@@ -2,7 +2,7 @@
  * The following styles get applied inside the editor only.
  */
 
- .wp-block-property-cpt-md-details {
+.wp-block-property-cpt-md-details {
 	display: block;
 	padding: 2rem;
 	border: 2px #aaa dashed;
@@ -20,12 +20,12 @@
 		margin-block: 2rem;
 	}
 
-	.property-cpt-md-details__preview {
-		background: white;
-		border-radius: 8px;
-		box-shadow: 0px 4px 12px rgb(0,0,0,0.15);
-		padding: 2rem;
-	}
+	// .property-cpt-md-details__preview {
+	// 	background: white;
+	// 	border-radius: 8px;
+	// 	box-shadow: 0px 4px 12px rgb(0, 0, 0, 0.15);
+	// 	padding: 2rem;
+	// }
 
 	.components-input-control__prefix {
 		padding-left: 8px;
