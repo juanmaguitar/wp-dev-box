@@ -1,29 +1,34 @@
 # wp-dev-box
 
+My own personal work environment for WP experiments
+
 ## Format and Coding Standards for WordPress
 
-Install composer dependencies
+To work in Visual Studio with format and Coding Standards recommended for WordPress (both for PHP and JS) we can do the following:
+
+1- Install the composer dependencies for the project
 
 ```
 composer install
 ```
 
-Install Visual Studio extensions:
+2- Install the NPM dependencies for the project
+
+```
+npm install
+```
+
+3- Install the following Visual Studio extensions:
 
 -   [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 -   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 -   [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
 -   [PHP Sniffer & Beautifier](https://marketplace.visualstudio.com/items?itemName=ValeryanM.vscode-phpsab)
 
-### Recommended VSCode Settings
-
-To align your VSCode settings with the project's recommended configuration:
-
-1. Navigate to the `.vscode` directory at the root of the project.
-2. Copy the `settings.json.sample` file and rename the copy to `settings.json`.
-3. If desired, customize the `settings.json` with your personal preferences.
-
----
+4- Use the Visual Studio settings available at `.vscode/settings.json.sample`
+    - Navigate to the `.vscode` directory at the root of the project.
+    - Copy the `settings.json.sample` file and rename the copy to `settings.json`.
+    - If desired, customize the `settings.json` with your personal preferences.
 
 ## Debug
 
