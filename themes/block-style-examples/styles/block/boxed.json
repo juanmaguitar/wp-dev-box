@@ -1,22 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Boxed",
-	"slug": "boxed",
+	"title": "HD Green",
+	"slug": "hand-drawn-green",
 	"blockTypes": [ "core/quote", "core/pullquote" ],
 	"styles": {
-		"border": {
-			"color": "currentColor",
-			"style": "solid",
-			"width": "6px"
-		},
-		"spacing": {
-			"padding": {
-				"top": "var:preset|spacing|60",
-				"bottom": "var:preset|spacing|60",
-				"left": "var:preset|spacing|60",
-				"right": "var:preset|spacing|60"
-			}
-		}
+		"css": "color: green; border: 2px solid currentColor; overflow: hidden; box-shadow: var(--wp--preset--shadow--natural); border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;"
 	}
 }

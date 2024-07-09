@@ -3,7 +3,7 @@
 	"landingPage": "/wp-admin/post.php",
 	"preferredVersions": {
 		"php": "8.0",
-		"wp": "6.5"
+		"wp": "beta"
 	},
 	"features": {
         "networking": true
@@ -11,13 +11,13 @@
 	"steps": [
 		{
 			"step": "installTheme",
-				"themeZipFile": {
-					"resource": "url",
-					"url": "https://github-proxy.com/proxy/?repo=wordpress-juanmaguitar/wp-dev-box&branch=main&directory=themes/block-style-examples"
-				},
-				"options": {
-					"activate": true
-				}
+			"themeZipFile": {
+				"resource": "url",
+				"url": "https://github-proxy.com/proxy/?repo=wordpress-juanmaguitar/wp-dev-box&branch=main&directory=themes/block-style-examples"
+			},
+			"options": {
+				"activate": true
+			}
 		},
 		{
 			"step": "login",

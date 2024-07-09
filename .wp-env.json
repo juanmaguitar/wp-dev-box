@@ -1,5 +1,5 @@
 {
-	"core": null,
+	"core":  "WordPress/WordPress#6.6-branch",
 	"plugins": ["./plugins/property-cpt-md"],
 	"themes": ["./themes/block-style-examples"],
 	"config": {
