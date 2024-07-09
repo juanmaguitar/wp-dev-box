@@ -1,0 +1,39 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/post.php?post=5&action=edit",
+	"preferredVersions": {
+		"php": "8.0",
+		"wp": "6.4"
+	},
+	"features": {
+        "networking": true
+    },
+	"steps": [
+		{
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-theme-examples/master/_zips/block-style-examples.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
+		},
+		{
+			"step": "importFile",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-theme-examples/master/block-style-examples/_playground/export.xml"
+			}
+		}
+	]
+}

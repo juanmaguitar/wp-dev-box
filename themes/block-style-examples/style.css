@@ -1,0 +1,21 @@
+/*!
+ * Theme Name:        Block Style Examples
+ * Description:       A child theme that registers custom styles in different ways.
+ * Version:           1.0.0
+ * Template:          twentytwentyfour
+ * Tags:              full-site-editing
+ * Text Domain:       examples-block-style
+ * Tested up to:      6.4
+ * Requires at least: 6.4
+ * Requires PHP:      7.4
+ * License:           GNU General Public License v2.0 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+.wp-block-quote.is-style-hand-drawn-blue {
+	color: blue;
+	border: 2px solid currentColor;
+	overflow: hidden;
+	box-shadow: var(--wp--preset--shadow--natural);
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+}
