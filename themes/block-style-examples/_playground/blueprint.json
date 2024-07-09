@@ -1,9 +1,9 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"landingPage": "/wp-admin/post.php?post=5&action=edit",
+	"landingPage": "/wp-admin/post.php",
 	"preferredVersions": {
 		"php": "8.0",
-		"wp": "6.4"
+		"wp": "6.5"
 	},
 	"features": {
         "networking": true
@@ -11,29 +11,18 @@
 	"steps": [
 		{
 			"step": "installTheme",
-			"themeZipFile": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-theme-examples/master/_zips/block-style-examples.zip"
-			},
-			"options": {
-				"activate": true
-			}
+				"themeZipFile": {
+					"resource": "url",
+					"url": "https://github-proxy.com/proxy/?repo=wordpress-juanmaguitar/wp-dev-box&branch=main&directory=themes/block-style-examples"
+				},
+				"options": {
+					"activate": true
+				}
 		},
 		{
 			"step": "login",
 			"username": "admin",
 			"password": "password"
-		},
-		{
-			"step": "runPHP",
-			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
-		},
-		{
-			"step": "importFile",
-			"file": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-theme-examples/master/block-style-examples/_playground/export.xml"
-			}
 		}
 	]
 }
