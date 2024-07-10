@@ -18,6 +18,7 @@ define( 'THEME_DIR', plugin_dir_path( __FILE__ ) );
 require_once THEME_DIR . '/includes/register-assets.php';
 require_once THEME_DIR . '/includes/enqueue-assets.php';
 require_once THEME_DIR . '/includes/register-block-style.php';
+require_once THEME_DIR . '/includes/filter-block-metadata.php';
 
 add_action( 'init', 'bse__register_styles' ); // Register handles for styles.
 add_action( 'wp_enqueue_scripts', 'bse__enqueue_styles' ); // Load frontend styles.
@@ -28,3 +29,6 @@ add_action( 'enqueue_block_editor_assets', 'bse__enqueue_block_variations_script
 
 // hand-drawn-red - Register Block Style via PHP.
 add_action( 'init', 'bse__register_block_styles' );
+
+// hand-drawn-purple - Filter core/quote block metadata to add a new style variation.
+add_filter( 'block_type_metadata', 'filter_block_quote_metadata' );
