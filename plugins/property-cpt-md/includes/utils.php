@@ -20,3 +20,17 @@ function write_log( $data ) {
 		}
 	}
 }
+
+/**
+ * Log registered styles handles.
+ *
+ * @return void
+ */
+function log_registered_styles_handles() {
+	$styles  = wp_styles();
+	$handles = array_keys( $styles->registered );
+	write_log( 'Registered Style Handles:' );
+	foreach ( $handles as $handle ) {
+		write_log( $handle );
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"styles": {
+		"blocks": {
+			"core/quote":{
+				"variations": {
+					"boxed-orange":{
+                        "color": {
+                            "text": "orange"
+                        },
+						"border": {
+							"color": "orange",
+							"style": "solid",
+							"width": "2px",
+							"radius": "15px"
+						},
+						"shadow": "var(--wp--preset--shadow--natural)"
+					}
+				}
+			}
+		}
+	}
+}
+

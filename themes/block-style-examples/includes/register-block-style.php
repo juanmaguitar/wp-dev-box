@@ -27,4 +27,21 @@ function bse__register_block_styles() {
 			}',
 		)
 	);
+
+	register_block_style(
+		'core/quote',
+		array(
+			'name'  => 'boxed-orange',
+			'label' => __( 'Boxed Orange', 'block-style-examples' ),
+		)
+	);
+
+	register_block_style(
+		'core/quote',
+		array(
+			'name'         => 'boxed-brown',
+			'label'        => __( 'Boxed Brown', 'block-style-examples' ),
+			'style_handle' => 'boxed-brown-style',
+		)
+	);
 }

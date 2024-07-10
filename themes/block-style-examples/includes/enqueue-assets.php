@@ -12,9 +12,9 @@
  *
  * @link  https://developer.wordpress.org/reference/functions/wp_enqueue_script/
  */
-function bse__enqueue_block_variations() {
+function bse__enqueue_block_variations_script() {
 	wp_enqueue_script(
-		'block-style-examples',
+		'block-styles-js',
 		get_theme_file_uri( 'assets/js/block-styles.js' ),
 		array(
 			'wp-blocks',
@@ -41,9 +41,11 @@ function bse__editor_styles() {
  */
 function bse__enqueue_styles() {
 	wp_enqueue_style(
-		'block-style-examples',
+		'style-css',
 		THEME_STYLE_URL,
 		array(),
 		microtime(),
 	);
+
+	wp_enqueue_style( 'boxed-brown-style' );
 }
