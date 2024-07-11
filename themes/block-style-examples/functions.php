@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Theme functions file, which is auto-loaded by WordPress. Use this file to
  * load additional PHP files and bootstrap the theme.
@@ -11,24 +12,11 @@
  * @since       1.0.0
  */
 
-// Setup.
-define( 'THEME_STYLE_URL', get_stylesheet_uri() );
-define( 'THEME_DIR', plugin_dir_path( __FILE__ ) );
+require_once THEME_DIR . '/constants.php';
 
-require_once THEME_DIR . '/includes/register-assets.php';
-require_once THEME_DIR . '/includes/enqueue-assets.php';
-require_once THEME_DIR . '/includes/register-block-style.php';
-require_once THEME_DIR . '/includes/filter-block-metadata.php';
-
-add_action( 'init', 'bse__register_styles' ); // Register handles for styles.
-add_action( 'wp_enqueue_scripts', 'bse__enqueue_styles' ); // Load frontend styles.
-
-// hand-drawn-blue - Load JS asset to register Block Style via JS.
-add_action( 'after_setup_theme', 'bse__editor_styles' ); // Load editor styles.
-add_action( 'enqueue_block_editor_assets', 'bse__enqueue_block_variations_script' );
-
-// hand-drawn-red - Register Block Style via PHP.
-add_action( 'init', 'bse__register_block_styles' );
-
-// hand-drawn-purple - Filter core/quote block metadata to add a new style variation.
-add_filter( 'block_type_metadata', 'filter_block_quote_metadata' );
+require_once THEME_DIR . '/includes/boxed-brown-style/register-block-style-php-handle';
+require_once THEME_DIR . '/includes/boxed-orange/register-block-style.php';
+require_once THEME_DIR . '/includes/hand-drawn-blue/register-block-style-js.php';
+require_once THEME_DIR . '/includes/hand-drawn-purple/filter-block-metadata.php';
+require_once THEME_DIR . '/includes/hand-drawn-red/register-block-style-php-inline.php';
+// another block style variation is defined via "/styles/block/hd-green.json"

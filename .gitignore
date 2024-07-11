@@ -33,3 +33,4 @@ build
 vendor
 .vscode/*
 !.vscode/settings.json.sample
+.DS_Store

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       Property (Custom Post Type + Meta Data)
  * Description:       Example block scaffolded with Create Block tool.
@@ -13,14 +14,10 @@
  * @package wp-dev-box
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
-
-// Setup.
-define( 'PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'PLUGIN_FILE', __FILE__ );
-
+require_once PLUGIN_DIR . '/constants.php';
 require_once PLUGIN_DIR . '/includes/register-post-type.php';
 require_once PLUGIN_DIR . '/includes/register-post-meta.php';
 require_once PLUGIN_DIR . '/includes/register-block.php';
