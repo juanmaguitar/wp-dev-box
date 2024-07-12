@@ -17,7 +17,15 @@
 if (! defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
-require_once PLUGIN_DIR . '/constants.php';
+
+// Setup.
+if (!defined('PLUGIN_DIR')) {
+	define('PLUGIN_DIR', plugin_dir_path(__FILE__));
+}
+if (!defined('PLUGIN_FILE')) {
+	define('PLUGIN_FILE', __FILE__);
+}
+
 require_once PLUGIN_DIR . '/includes/register-post-type.php';
 require_once PLUGIN_DIR . '/includes/register-post-meta.php';
 require_once PLUGIN_DIR . '/includes/register-block.php';

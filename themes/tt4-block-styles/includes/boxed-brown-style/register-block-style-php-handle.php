@@ -32,7 +32,7 @@ add_action('init', 'bse__enqueue_style'); // Register handles for styles.
 // Registers custom block styles via PHP
 // @link  https://developer.wordpress.org/reference/functions/register_block_style/
 
-function bse__register_block_styles()
+function bse__register_block_styles__boxed_brown()
 {
 	register_block_style(
 		'core/quote',
@@ -44,4 +44,4 @@ function bse__register_block_styles()
 	);
 }
 
-add_action('init', 'bse__register_block_styles');
+add_action('init', 'bse__register_block_styles__boxed_brown');

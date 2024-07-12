@@ -16,7 +16,7 @@
 // Enqueue to load main style.css in the frontend
 // @link  https://developer.wordpress.org/reference/functions/wp_enqueue_style/
 
-function bse__enqueue_style()
+function bse__enqueue_style__style_css_purple()
 {
 	wp_enqueue_style(
 		'style-css',
@@ -26,7 +26,7 @@ function bse__enqueue_style()
 	);
 }
 
-add_action('wp_enqueue_scripts', 'bse__enqueue_style'); // Load frontend styles.
+add_action('wp_enqueue_scripts', 'bse__enqueue_style__style_css_purple'); // Load frontend styles.
 
 // ------------------------------------------------------------------------------
 
@@ -35,10 +35,12 @@ add_action('wp_enqueue_scripts', 'bse__enqueue_style'); // Load frontend styles.
 // Adds the `style.css` file as an editor stylesheet.
 // https://developer.wordpress.org/reference/functions/add_editor_style/
 
-function bse__editor_styles()
+function bse__editor_styles__style_purple()
 {
 	add_editor_style('assets/css/hand-drawn-purple.css');
 }
+
+add_action('after_setup_theme', 'bse__editor_styles__style_purple'); // Load editor styles.
 
 // ------------------------------------------------------------------------------
 

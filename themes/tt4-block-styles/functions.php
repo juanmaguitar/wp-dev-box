@@ -12,11 +12,17 @@
  * @since       1.0.0
  */
 
-require_once THEME_DIR . '/constants.php';
+// Define theme constants
+if (!defined('THEME_STYLE_URL')) {
+	define('THEME_STYLE_URL', get_stylesheet_uri());
+}
+if (!defined('THEME_DIR')) {
+	define('THEME_DIR', plugin_dir_path(__FILE__));
+}
 
-require_once THEME_DIR . '/includes/boxed-brown-style/register-block-style-php-handle';
+require_once THEME_DIR . '/includes/boxed-brown-style/register-block-style-php-handle.php';
 require_once THEME_DIR . '/includes/boxed-orange/register-block-style.php';
 require_once THEME_DIR . '/includes/hand-drawn-blue/register-block-style-js.php';
 require_once THEME_DIR . '/includes/hand-drawn-purple/filter-block-metadata.php';
 require_once THEME_DIR . '/includes/hand-drawn-red/register-block-style-php-inline.php';
-// another block style variation is defined via "/styles/block/hd-green.json"
+// "hand-drawn-green" block style variation is defined via "/styles/block/hd-green.json"

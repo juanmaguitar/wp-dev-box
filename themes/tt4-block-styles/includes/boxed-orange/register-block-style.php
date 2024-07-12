@@ -16,7 +16,7 @@
 // Registers custom block styles via PHP
 // @link  https://developer.wordpress.org/reference/functions/register_block_style/
 
-function bse__register_block_styles()
+function bse__register_block_styles__boxed_orange()
 {
 	register_block_style(
 		'core/quote',
@@ -26,3 +26,5 @@ function bse__register_block_styles()
 		)
 	);
 }
+
+add_action('init', 'bse__register_block_styles__boxed_orange');

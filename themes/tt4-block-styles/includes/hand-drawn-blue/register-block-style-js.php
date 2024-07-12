@@ -16,7 +16,7 @@
 // Enqueue to load main style.css in the frontend
 // @link  https://developer.wordpress.org/reference/functions/wp_enqueue_style/
 
-function bse__enqueue_style()
+function bse__enqueue_style__style_css_blue()
 {
 	wp_enqueue_style(
 		'style-css',
@@ -26,26 +26,24 @@ function bse__enqueue_style()
 	);
 }
 
-add_action('wp_enqueue_scripts', 'bse__enqueue_style'); // Load frontend styles.
+add_action('wp_enqueue_scripts', 'bse__enqueue_style__style_css_blue'); // Load frontend styles.
 
 // ------------------------------------------------------------------------------
-
-/* hand-drawn-blue - Load JS asset to register Block Style via JS. */
 
 // Adds the `style.css` file as an editor stylesheet.
 // https://developer.wordpress.org/reference/functions/add_editor_style/
 
-function bse__editor_styles()
+function bse__editor_styles__style_blue()
 {
 	add_editor_style('style.css');
 }
 
-add_action('after_setup_theme', 'bse__editor_styles'); // Load editor styles.
+add_action('after_setup_theme', 'bse__editor_styles__style_blue'); // Load editor styles.
 
 // ------------------------------------------------------------------------------
 
-// Enqueues the `assets/js/block-styles.js` file, which is used to create
-// custom block styles.
+// Enqueues the `assets/js/block-styles.js` file,
+// which is used to register the custom block style.
 // @link  https://developer.wordpress.org/reference/functions/wp_enqueue_script/
 
 function bse__enqueue_block_variations_script()
