@@ -17,96 +17,102 @@ const goodreadsIcon = (
 
 // Register the Book Author variation.
 registerBlockVariation( 'core/paragraph', {
-	name:       'themeslug/book-author',
-	title:      __( 'Book Author', 'themeslug' ),
+	name: 'themeslug/book-author',
+	title: __( 'Book Author', 'themeslug' ),
 	description: __( 'Displays the book author.', 'themeslug' ),
-	category:   'widgets',
-	keywords:   [ 'book', 'author' ],
-	icon:       pencil,
-	scope:      [ 'inserter' ],
+	category: 'widgets',
+	keywords: [ 'book', 'author' ],
+	icon: pencil,
+	scope: [ 'inserter' ],
 	attributes: {
 		metadata: {
 			bindings: {
 				content: {
 					source: 'core/post-meta',
 					args: {
-						key: 'themeslug_book_author'
-					}
-				}
-			}
+						key: 'themeslug_book_author',
+					},
+				},
+			},
 		},
-		placeholder: __( 'Book Author', 'themeslug' )
+		placeholder: __( 'Book Author', 'themeslug' ),
 	},
 	example: {},
 	// Note that we have to check for the specific binding key to determine
 	// if the variation is active.
-	isActive: (blockAttributes) =>
-		'themeslug_book_author' === blockAttributes?.metadata?.bindings?.content?.args?.key
-});
+	isActive: ( blockAttributes ) =>
+		'themeslug_book_author' ===
+		blockAttributes?.metadata?.bindings?.content?.args?.key,
+} );
 
 // Register the Book Length variation.
 registerBlockVariation( 'core/paragraph', {
-	name:       'themeslug/book-length',
-	title:      __( 'Book Length', 'themeslug' ),
+	name: 'themeslug/book-length',
+	title: __( 'Book Length', 'themeslug' ),
 	description: __( 'Displays the book length in pages.', 'themeslug' ),
-	category:   'widgets',
-	keywords:   [ 'book', 'pages', 'length' ],
-	icon:       page,
-	scope:      [ 'inserter' ],
+	category: 'widgets',
+	keywords: [ 'book', 'pages', 'length' ],
+	icon: page,
+	scope: [ 'inserter' ],
 	attributes: {
 		metadata: {
 			bindings: {
 				content: {
 					source: 'core/post-meta',
 					args: {
-						key: 'themeslug_book_length'
-					}
-				}
-			}
+						key: 'themeslug_book_length',
+					},
+				},
+			},
 		},
-		placeholder: __( 'Book Length', 'themeslug' )
+		placeholder: __( 'Book Length', 'themeslug' ),
 	},
 	example: {},
-	isActive: (blockAttributes) =>
-		'themeslug_book_length' === blockAttributes?.metadata?.bindings?.content?.args?.key
-});
+	isActive: ( blockAttributes ) =>
+		'themeslug_book_length' ===
+		blockAttributes?.metadata?.bindings?.content?.args?.key,
+} );
 
 // Register the Book Rating variation.
 registerBlockVariation( 'core/paragraph', {
-	name:       'themeslug/book-rating',
-	title:      __( 'Book Rating', 'themeslug' ),
+	name: 'themeslug/book-rating',
+	title: __( 'Book Rating', 'themeslug' ),
 	description: __( 'Displays the book rating.', 'themeslug' ),
-	category:   'widgets',
-	keywords:   [ 'book', 'rating', 'review' ],
-	icon:       starFilled,
-	scope:      [ 'inserter' ],
+	category: 'widgets',
+	keywords: [ 'book', 'rating', 'review' ],
+	icon: starFilled,
+	scope: [ 'inserter' ],
 	attributes: {
 		metadata: {
 			bindings: {
 				content: {
 					source: 'core/post-meta',
 					args: {
-						key: 'themeslug_book_rating'
-					}
-				}
-			}
+						key: 'themeslug_book_rating',
+					},
+				},
+			},
 		},
-		placeholder: __( 'Book Rating', 'themeslug' )
+		placeholder: __( 'Book Rating', 'themeslug' ),
 	},
 	example: {},
-	isActive: (blockAttributes) =>
-		'themeslug_book_rating' === blockAttributes?.metadata?.bindings?.content?.args?.key
-});
+	isActive: ( blockAttributes ) =>
+		'themeslug_book_rating' ===
+		blockAttributes?.metadata?.bindings?.content?.args?.key,
+} );
 
 // Register the Book Goodreads Button variation.
 registerBlockVariation( 'core/button', {
-	name:       'themeslug/book-goodreads-button',
-	title:      __( 'Book Goodreads Button', 'themeslug' ),
-	description: __( 'Displays a button with the link to the Goodreads book URL.', 'themeslug' ),
-	category:   'widgets',
-	keywords:   [ 'book', 'author' ],
-	icon:       goodreadsIcon,
-	scope:      [ 'inserter' ],
+	name: 'themeslug/book-goodreads-button',
+	title: __( 'Book Goodreads Button', 'themeslug' ),
+	description: __(
+		'Displays a button with the link to the Goodreads book URL.',
+		'themeslug'
+	),
+	category: 'widgets',
+	keywords: [ 'book', 'author' ],
+	icon: goodreadsIcon,
+	scope: [ 'inserter' ],
 	attributes: {
 		text: __( 'View on Goodreads &rarr;', 'themeslug' ),
 		metadata: {
@@ -114,13 +120,14 @@ registerBlockVariation( 'core/button', {
 				url: {
 					source: 'core/post-meta',
 					args: {
-						key: 'themeslug_book_goodreads_url'
-					}
-				}
-			}
-		}
+						key: 'themeslug_book_goodreads_url',
+					},
+				},
+			},
+		},
 	},
 	example: {},
-	isActive: (blockAttributes) =>
-		'themeslug_book_goodreads_url' === blockAttributes?.metadata?.bindings?.url?.args?.key
-});
+	isActive: ( blockAttributes ) =>
+		'themeslug_book_goodreads_url' ===
+		blockAttributes?.metadata?.bindings?.url?.args?.key,
+} );

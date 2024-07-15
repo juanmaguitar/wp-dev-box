@@ -14,7 +14,7 @@
 
 // Setup.
 define('THEME_STYLE_URL', get_stylesheet_uri());
-define('THEME_DIR', plugin_dir_path(__FILE__));
+define('THEME_DIR', __DIR__);
 
 require_once THEME_DIR . '/includes/register-assets.php';
 require_once THEME_DIR . '/includes/enqueue-assets.php';
@@ -26,10 +26,10 @@ add_action('wp_enqueue_scripts', 'bse__enqueue_styles'); // Load frontend styles
 
 // hand-drawn-blue - Load JS asset to register Block Style via JS.
 add_action('after_setup_theme', 'bse__editor_styles'); // Load editor styles.
-add_action('enqueue_block_editor_assets', 'bse__enqueue_block_variations_script');
+add_action('enqueue_block_editor_assets', 'bse__enqueue_block_variations_script'); // Load JS that registers block style variation.
 
 // hand-drawn-red - Register Block Style via PHP.
-add_action('init', 'bse__register_block_styles');
+add_action("init", 'bse__register_block_styles');
 
 // hand-drawn-purple - Filter core/quote block metadata to add a new style variation.
 add_filter('block_type_metadata', 'filter_block_quote_metadata');

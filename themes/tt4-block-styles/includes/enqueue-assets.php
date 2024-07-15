@@ -53,3 +53,16 @@ function bse__enqueue_styles()
 
 	wp_enqueue_style('boxed-brown-style');
 }
+
+function bse__enqueue_quote_block_styles()
+{
+	wp_enqueue_block_style(
+		'core/quote',
+		array(
+			'handle' => 'boxed-powderblue-style',
+			'src'    => plugin_dir_url(__FILE__) . 'build/style.css',
+			'ver'    => wp_get_theme()->get('Version'),
+			'path'   => plugin_dir_path(__FILE__) . 'build/style.css',
+		)
+	);
+}

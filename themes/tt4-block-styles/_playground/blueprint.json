@@ -13,7 +13,7 @@
 			"step": "installTheme",
 			"themeZipFile": {
 				"resource": "url",
-				"url": "https://github-proxy.com/proxy/?repo=wordpress-juanmaguitar/wp-dev-box&branch=main&directory=themes/block-style-examples"
+				"url": "https://github-proxy.com/proxy/?repo=wordpress-juanmaguitar/wp-dev-box&branch=main&directory=themes/tt4-block-styles"
 			},
 			"options": {
 				"activate": true

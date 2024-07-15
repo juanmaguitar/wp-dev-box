@@ -19,7 +19,7 @@ function bse__register_block_styles()
 		'core/quote',
 		array(
 			'name'         => 'hand-drawn-red',
-			'label'        => __('HD Red', 'block-style-examples'),
+			'label'        => __('HD Red', 'tt4-block-styles'),
 			'inline_style' => '.wp-block-quote.is-style-hand-drawn-red {
 				color: red;
 				border: 2px solid currentColor;
@@ -34,7 +34,7 @@ function bse__register_block_styles()
 		'core/quote',
 		array(
 			'name'  => 'boxed-orange',
-			'label' => __('Boxed Orange', 'block-style-examples'),
+			'label' => __('Boxed Orange', 'tt4-block-styles'),
 		)
 	);
 
@@ -42,7 +42,7 @@ function bse__register_block_styles()
 		'core/quote',
 		array(
 			'name'         => 'boxed-brown',
-			'label'        => __('Boxed Brown', 'block-style-examples'),
+			'label'        => __('Boxed Brown', 'tt4-block-styles'),
 			'style_handle' => 'boxed-brown-style',
 		)
 	);

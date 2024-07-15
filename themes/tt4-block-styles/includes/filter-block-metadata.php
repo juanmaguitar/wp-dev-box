@@ -19,7 +19,7 @@ function filter_block_quote_metadata($metadata)
 	if ('core/quote' === $metadata['name']) {
 		$new_style = array(
 			'name'  => 'hand-drawn-purple',
-			'label' => __('HD Purple', 'block-style-examples'),
+			'label' => __('HD Purple', 'tt4-block-styles'),
 		);
 
 		$metadata['styles'][] = $new_style;

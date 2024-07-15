@@ -20,3 +20,19 @@
 	box-shadow: var(--wp--preset--shadow--natural);
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
 }
+
+.wp-block-quote.is-style-hand-drawn-purple {
+	color: purple;
+	border: 5px solid purple;
+	overflow: hidden;
+	box-shadow: var(--wp--preset--shadow--natural);
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+}
+
+.default-hand-drawn-black {
+	color: black;
+	border: 5px solid black;
+	overflow: hidden;
+	box-shadow: var(--wp--preset--shadow--natural);
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+}
