@@ -66,5 +66,10 @@ npx wp-env start --xdebug
 
 There's a `.vscode/launch.json` already defined in this project.
 
+> [!NOTE]
+> Don't forget to include the path of the folder you want to debug at:
+> - `"pathMappings"` property of `.vscode/launch.json`
+> - `"themes"` or `"plugins"` property of `.wp-env.json`
+
 Check [here](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/#using-xdebug) for full info about enabling XDebug with `wp-env`
 

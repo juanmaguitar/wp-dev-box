@@ -34,3 +34,4 @@ vendor
 .vscode/*
 !.vscode/settings.json.sample
 .DS_Store
+themes/tt4-hp-*
